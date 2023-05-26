@@ -52,7 +52,7 @@ class GaussianMixture(Target):
             self.logZ
     
 class GaussianRing(GaussianMixture):
-    def __init__(self, radius=3., std=0.3):
+    def __init__(self, radius=3., std=0.1):
         rad = np.linspace(-1, 1, 9)[:-1] * np.pi
         means = torch.tensor(radius * np.stack([np.sin(rad), np.cos(rad)]), requires_grad=False, dtype=torch.float32).reshape(1, -1, 8)
         stds = torch.ones_like(means, requires_grad=False, dtype=torch.float32).reshape(1, -1, 8) * std

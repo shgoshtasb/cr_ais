@@ -11,7 +11,7 @@ from .aux import logselfnormalize
 lim = 4
 LIMS = np.array([[-lim, lim], [-lim, lim]])
 
-def plot_particles(ax, z, log_w=None, legend=False, lims=LIMS, nb_point_per_dimension=100, cmap="coolwarm", alpha =0.5, label=''):
+def plot_particles(ax, z, log_w=None, legend=False, lims=LIMS, nb_point_per_dimension=100, cmap="coolwarm", alpha =0.4, label=''):
     print(label)
     if log_w is not None:
         min_w = torch.min(log_w, dim=0)[0]
