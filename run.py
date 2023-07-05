@@ -11,7 +11,7 @@ from utils.experiments import get_parsed_args
 from utils.targets import synthetic_targets
 from utils.data import Pima, Sonar
 from utils.experiments import get_modified_experiment, get_dirs
-from sampling.utils import get_sampler, eeight_stats, stimate
+from sampling.utils import get_sampler, estimate
 from sampling.mcd import train
 
 seeds = [1, 2, 3, 4, 5]
