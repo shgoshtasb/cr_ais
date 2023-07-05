@@ -45,7 +45,7 @@ class GaussianMixture(Target):
         return .5 * self.data_dim * np.log(2 * np.pi) + torch.logsumexp(torch.log(self.stds).sum(dim=1, keepdim=True), dim=2).sum()
         
     def forward(self, z, x=None):
-        log_density = - 0.5 * ((z.reshape(z.shape + (1,)) - self.means)**2/self.stds).sum(dim=1) -\
+        log_density = - 0.5 * (((z.reshape(z.shape + (1,)) - self.means)/self.stds)**2).sum(dim=1) -\
             0.5 * self.data_dim * np.log(2 * np.pi) -\
             torch.log(self.stds).sum(dim=1)
         return torch.logsumexp(log_density + torch.log(self.pi), dim=1, keepdim=True) +\

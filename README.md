@@ -11,7 +11,7 @@ Relying on this connection we can adapt the annealing schedule to reduce the div
 The experiments which appear in the paper can be run via the `run.py` script. For example:
 
 ```bash
-python run.py --sampler CR --transition HMC --transition_step_size 0.5 --hmc_alpha 1. --hmc_partial_refresh 10 --hmc_n_leapfrogs 1 --transition_update fixed --n_samples 2048 --test_n_samples 4096 --testname 1ec34c --target UdNormal_128 --path power --annealing_alpha 0.0 --max_M 2048 --tol 1e-3 --min_step=0.0000001 --seed 1 --latent_dim 128  --dt 512.0
+python run.py --sampler CR --transition HMC --transition_step_size 0.5 --hmc_alpha 1. --hmc_partial_refresh 10 --hmc_n_leapfrogs 1 --transition_update fixed --n_samples 2048 --test_n_samples 4096 --testname 1ec34c --target UdNormal_128 --path power --annealing_alpha 0.0 --max_M 2048 --tol 1e-3 --min_step=0.0000001 --seed 1 --latent_dim 128  --dt 1.0
 ```
 
 - **sampler** argument can be replaced with 'Plain', 'Adaptive', 'SMC', 'AdaptiveSMC', 'CRSMC', 'MCD'
